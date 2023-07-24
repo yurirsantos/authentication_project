@@ -13,10 +13,8 @@ import {
   ChangeCodeActiveAccountType,
   PasswordChangeCodeReplacePasswordType,
 } from '../Types/ChangeCodeType';
-import { randomUUID } from 'crypto';
 import * as bcrypt from 'bcrypt';
 import { AuthenticationService } from 'src/services/authentication';
-import { AuthGuard } from '@nestjs/passport';
 
 const saltOrRounds = 10;
 

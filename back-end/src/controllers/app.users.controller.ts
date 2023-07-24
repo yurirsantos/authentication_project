@@ -125,7 +125,7 @@ export class UserController {
         },
       });
       if (registerUser) {
-        const registerContact = await this.prisma.contacts.create({
+        await this.prisma.contacts.create({
           data: {
             id: randomUUID(),
             codCountry: contact.codCountry,
