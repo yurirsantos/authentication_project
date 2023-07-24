@@ -42,8 +42,8 @@ export default function Register() {
   const [loadingRegisterUser, setLoadingRegisterUser] = useState<boolean>(false)
 
   async function onSubmit(data: UserType) {
-    setLoadingRegisterUser(true)
     if (countrySelect && password) {
+      setLoadingRegisterUser(true)
       if (data.receiveOffers.toString() == 'yes') {
         data.receiveOffers = true
       } else {

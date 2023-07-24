@@ -38,6 +38,9 @@ export default function ActiveAccount() {
     if (returnActiveAccount) {
       setLoadingResetActiveAccount(false)
       window.location.replace('/')
+    } else {
+      setLoadingResetActiveAccount(false)
+      resetActiveAccount()
     }
   }
   function handleChangeCode(
@@ -74,6 +77,8 @@ export default function ActiveAccount() {
       const returnResetEmailActiveAccountUser =
         await resetSendEmailActiveAccountUser(emailUser)
       if (returnResetEmailActiveAccountUser) {
+        setLoadingResetActiveAccount(false)
+      } else {
         setLoadingResetActiveAccount(false)
       }
     }

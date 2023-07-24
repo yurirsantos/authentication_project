@@ -124,7 +124,7 @@ export const activeAccountUser = async (data: ActiveAccountChangeCodeType) => {
 
 export const resetSendEmailActiveAccountUser = async (email: string) => {
   return await api
-    .post('users/activeAccount/sendEmail/:email', email)
+    .post(`users/activeAccount/sendEmail/${email}`)
     .then((response: any) => {
       AlertSuccess('E-mail enviado com sucesso!')
       return response.data
